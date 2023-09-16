@@ -1,0 +1,16 @@
+# https://gallery.ecr.aws/aws-controllers-k8s/s3-chart
+# https://aws-controllers-k8s.github.io/community/docs/user-docs/install/
+# skopeo list-tags --no-creds docker://public.ecr.aws/aws-controllers-k8s/s3-chart
+# helm pull oci://public.ecr.aws/aws-controllers-k8s/iam-controller --version 0.0.20
+
+# helm pull oci://public.ecr.aws/aws-ec2/helm/aws-node-termination-handler
+# helm pull oci://public.ecr.aws/aws-controllers-k8s/iam-chart --version 0.0.20
+# helm pull oci://public.ecr.aws/aws-controllers-k8s/s3-chart --version 0.0.3
+
+apiVersion: v2
+name: aws-s3
+version: 1.0.0
+dependencies:
+  - name: s3-chart
+    version: 0.0.3
+    repository: oci://public.ecr.aws/aws-controllers-k8s

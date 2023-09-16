@@ -1,13 +1,13 @@
-# Renovate Blueprint
+# Renovate issue with OCI image helm chart fetch
 
 ---
 
-![](https://img.shields.io/github/commit-activity/m/ik-workshop/renovate-issue-blueprint)
-![](https://img.shields.io/github/last-commit/ik-workshop/renovate-issue-blueprint)
+![](https://img.shields.io/github/commit-activity/m/ik-workshop/renovate-issue-ecr-oci-fetch)
+![](https://img.shields.io/github/last-commit/ik-workshop/renovate-issue-ecr-oci-fetch)
 [![](https://img.shields.io/github/license/ivankatliarchuk/.github)](https://github.com/ivankatliarchuk/.github/LICENCE)
-[![](https://img.shields.io/github/languages/code-size/ik-workshop/renovate-issue-blueprint)](https://github.com/ik-workshop/renovate-issue-blueprint)
-[![](https://img.shields.io/github/repo-size/ik-workshop/renovate-issue-blueprint)](https://github.com/ik-workshop/renovate-issue-blueprint)
-![](https://img.shields.io/github/languages/top/ik-workshop/renovate-issue-blueprint?color=green&logo=markdown&logoColor=blue)
+[![](https://img.shields.io/github/languages/code-size/ik-workshop/renovate-issue-ecr-oci-fetch)](https://github.com/ik-workshop/renovate-issue-ecr-oci-fetch)
+[![](https://img.shields.io/github/repo-size/ik-workshop/renovate-issue-ecr-oci-fetch)](https://github.com/ik-workshop/renovate-issue-ecr-oci-fetch)
+![](https://img.shields.io/github/languages/top/ik-workshop/renovate-issue-ecr-oci-fetch?color=green&logo=markdown&logoColor=blue)
 
 ---
 
@@ -17,13 +17,18 @@
 
 ### Expected result
 
-## Create
 
-[**Create a repository using this template →**][template.generate]
 
 ## Resources
 
 ### Commands
+
+```sh
+$ skopeo list-tags --no-creds docker://public.ecr.aws/aws-ec2/helm/aws-node-termination-handler
+$ skopeo list-tags --no-creds docker://public.ecr.aws/amazonlinux/amazonlinux
+$ skopeo list-tags --no-creds docker://public.ecr.aws/aws-controllers-k8s/iam-controller
+$ skopeo list-tags --no-creds docker://public.ecr.aws/aws-controllers-k8s/s3-chart
+```
 
 ### Renovate Docs
 
@@ -35,9 +40,10 @@
 
 ### Supporting Docs
 
+- [Similar workshop](https://github.com/ik-workshop/renovate-issue-ecr-public-access/blob/main/config.js)
+
 
 ---
 
 <!-- resources -->
-[template.generate]: https://github.com/ik-workshop/renovate-issue-blueprint/generate
 [code-style.badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square

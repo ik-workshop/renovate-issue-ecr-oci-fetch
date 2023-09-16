@@ -13,18 +13,9 @@ module.exports = {
   "onboarding": false,
   "requireConfig": "optional",
   "baseBranches": ["master", "main"],
+  "enabledManagers": ["helmv3", "helm-values"],
   "packageRules": [
 
   ],
-  "regexManagers": [
-    {
-      "description": "Update docker references in files",
-      "fileMatch": [".*"],
-      "matchStrings": [
-        "image:\n *repository: (?<depName>.*?)\n *tag: (?<currentValue>[a-z0-9.-]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?"
-      ],
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "docker"
-    }
-  ]
+  "regexManagers": []
 }
