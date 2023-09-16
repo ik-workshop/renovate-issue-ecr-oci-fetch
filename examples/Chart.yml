@@ -12,5 +12,5 @@ name: aws-s3
 version: 1.0.0
 dependencies:
   - name: s3-chart
-    version: 0.0.3
+    version: 0.1.8
     repository: oci://public.ecr.aws/aws-controllers-k8s
